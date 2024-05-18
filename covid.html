@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Data Portal</title>
+    <link rel="stylesheet" href="covid.css">
+    <script src="covid.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" data-page="affected" class="nav-link">Affected</a></li>
+            <li><a href="#" data-page="vaccinated" class="nav-link">Vaccinated</a></li>
+            <li><a href="#" data-page="neighbors" class="nav-link">Neighboring Countries</a></li>
+        </ul>
+    </nav>
+    
+    <div id="affected" class="page">
+        <h1>Affected</h1>
+        <select id="country-select-affected"></select>
+        <canvas id="affectedChart"></canvas>
+    </div>
+    
+    <div id="vaccinated" class="page">
+        <h1>Vaccinated</h1>
+        <select id="country-select-vaccinated"></select>
+        <canvas id="vaccinatedChart"></canvas>
+    </div>
+    
+    <div id="neighbors" class="page">
+        <h1>Neighboring Countries</h1>
+        <table id="neighbor-table">
+            <thead>
+                <tr>
+                    <th>Country</th>
+                    <th>Cases</th>
+                    <th>Deaths</th>
+                    <th>Recoveries</th>
+                    <th>Vaccinations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated here -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
